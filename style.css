@@ -1,87 +1,181 @@
-x* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
+/* General Page Styling */
 body {
+  margin: 0;
+  font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333;
-  line-height: 1.6;
+}
+
+header {
+  background-color: #555;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  justify-content: right;
+  gap: 20px;
+  padding: 15px;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #007acc;
-}
-
-section {
-  padding: 3rem 2rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-h1, h2 {
-  margin-bottom: 1rem;
-  color: #007acc;
-}
-
-.button {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: #007acc;
+.navbar a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
   border-radius: 5px;
-  margin-top: 1rem;
+}
+
+.navbar a:hover, .navbar a.active {
+  background-color: #333;
+}
+
+/* Section Styling */
+main {
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+/* Projects Gallery */
+.projects-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  background-color: #555;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* change ratio to 4/3 or 1/1 as needed */
+  object-fit: cover; /* ensures image fills area without stretching */
+}
+
+.project-card h3 {
+  margin: 10px 0 5px 0;
+}
+
+.project-card a {
+  color: #f9f9f9;           /* Change this to whatever color you want */
+  text-decoration: none;    /* Removes underline */
+  font-weight: bold;        /* Optional */
+}
+
+.project-card a:visited {
+  color: #f9f9f9;           /* Keeps same color after clicking */
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: #f9f9f9;
+  padding: 0 10px 15px;
+}
+
+/* Bio Section */
+
+.bio {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.bio h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.bio h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+.bio p {
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+.bio ul {
+  list-style-type: disc;
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+  padding-left: 20px;
+}
+
+.bio .button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #555;
+  color: #f9f9f9;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
-.button:hover {
-  background-color: #005f99;
+.bio .button:hover {
+  background-color: #333;
 }
 
-.contact p {
-  margin: 0.5rem 0;
+.contact {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px 15px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+  box-sizing: border-box;
+  background-color: #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin: 12px 0;
+}
+
+.contact-info a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #005fa3;
+  text-decoration: underline;
+}
+
+/* Mobile Friendly */
 @media (max-width: 600px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+      flex-direction: column;
+      align-items: center;
   }
 }
