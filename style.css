@@ -12,11 +12,38 @@ header {
 
 .navbar {
   display: flex;
-  justify-content: right;
-  gap: 20px;
-  padding: 15px;
+  align-items: center;
+  padding: 15px 20px;
+  list-style: none;
 }
 
+
+.logo {
+  font-size: 1.5rem;           /* Slightly larger for prominence */
+  font-weight: 700;            /* Bold but elegant */
+  color: #f9f9f9;                /* Contrast with header background */
+  letter-spacing: 1.5px;       /* Adds subtle spacing between letters */
+  font-family: Arial, sans-serif; /* Modern, clean font */
+  text-transform: uppercase;   /* All caps for a strong look */
+  user-select: none;           /* Prevent accidental text selection */
+  cursor: default;             /* Normal cursor */
+  padding-left: 15px;          /* Some breathing room on left */
+  transition: color 0.3s ease; /* Smooth color transition */
+  margin-right: auto; /* pushes nav links to right */
+}
+  
+  /* Optional: subtle hover effect to look interactive but professional */
+  .logo:hover {
+    color: #f9f9f9;  /* Slightly lighter on hover */
+  }
+
+.navbar li {
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+/* Nav links */
 .navbar a {
   color: white;
   text-decoration: none;
@@ -49,7 +76,7 @@ h1, h2, h3 {
 .project-card {
   background-color: #555;
   border-radius: 10px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   text-align: center;
   transition: transform 0.2s;
@@ -88,29 +115,45 @@ h1, h2, h3 {
 /* Bio Section */
 
 .bio {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  color: #333;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px 15px;
   text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.bio img {
+  max-width:100%; 
+  height:auto; 
+  display:block; 
+  margin:auto; 
+  margin-top:10px; 
+  border-radius:8px;
 }
 
 .bio h1 {
   font-size: 2.2rem;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .bio h2 {
   margin-top: 30px;
   margin-bottom: 15px;
   font-size: 1.6rem;
+  text-align: center;
 }
 
 .bio p {
   margin-bottom: 20px;
   padding: 0 15px;
+  text-align: center;
 }
 
 .bio ul {
@@ -138,26 +181,28 @@ h1, h2, h3 {
 
 .contact {
   max-width: 600px;
-  margin: 50px auto;
+  margin: 30px auto;
   padding: 20px 15px;
   text-align: center;
   font-family: Arial, sans-serif;
   color: #333;
   box-sizing: border-box;
-  background-color: #fefefe;
+  background-color: #f9f9f9;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 .contact h2 {
   font-size: 2rem;
   margin-bottom: 25px;
   color: #222;
+  text-align: center;
 }
 
 .contact-info p {
   font-size: 1.1rem;
   margin: 12px 0;
+  text-align: center;
 }
 
 .contact-info a {
@@ -205,6 +250,87 @@ h1, h2, h3 {
   background-color: #005fa3;
 }
 */
+
+/* Shared Portfolio Page Styling */
+/* ===== Shared Project Page Styles ===== */
+.project-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Headings on project pages */
+.project-page h1{
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.project-page h2{
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.project-page h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Paragraphs */
+.project-page p {
+  margin-bottom: 20px;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.project-page ul {
+  list-style-type: disc;
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+  padding-left: 20px;
+}
+
+/* Images with ratio-based sizing */
+.project-page img { 
+  max-width:100%; 
+  height:auto; 
+  display:block; 
+  margin:auto; 
+  margin-top:30px; 
+  border-radius:8px;
+  align-items: center;
+}
+
+/* Embedded videos responsive */
+.project-page iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+/* Buttons or links inside project pages */
+.project-page .button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #555;
+  color: #f9f9f9;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.project-page .button:hover {
+  background-color: #333;
+}
+
+
 
 /* Mobile Friendly */
 @media (max-width: 600px) {
