@@ -1,10 +1,49 @@
-/* General Page Styling */
+/* Global Styles */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333;
 }
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+}
+
+ul {
+  list-style-type: disc;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.button {
+  display: block;          /* makes each button its own block */
+  width: fit-content;      /* shrink to fit text */
+  margin: 20px auto;       /* auto-centers horizontally */
+  padding: 12px 24px;
+  background-color: #555;
+  color: #f9f9f9;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-align: center;      /* centers text inside the button */
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+/* Top Navbar */
 
 header {
   background-color: #555;
@@ -17,33 +56,11 @@ header {
   list-style: none;
 }
 
-
-.logo {
-  font-size: 1.5rem;           /* Slightly larger for prominence */
-  font-weight: 700;            /* Bold but elegant */
-  color: #f9f9f9;                /* Contrast with header background */
-  letter-spacing: 1.5px;       /* Adds subtle spacing between letters */
-  font-family: Arial, sans-serif; /* Modern, clean font */
-  text-transform: uppercase;   /* All caps for a strong look */
-  user-select: none;           /* Prevent accidental text selection */
-  cursor: default;             /* Normal cursor */
-  padding-left: 15px;          /* Some breathing room on left */
-  transition: color 0.3s ease; /* Smooth color transition */
-  margin-right: auto; /* pushes nav links to right */
-}
-  
-  /* Optional: subtle hover effect to look interactive but professional */
-  .logo:hover {
-    color: #f9f9f9;  /* Slightly lighter on hover */
-  }
-
 .navbar li {
   display: inline-block;
   margin-left: 15px;
-  margin-right: 0;
 }
 
-/* Nav links */
 .navbar a {
   color: white;
   text-decoration: none;
@@ -52,20 +69,35 @@ header {
   border-radius: 5px;
 }
 
-.navbar a:hover, .navbar a.active {
+.navbar a:hover,
+.navbar a.active {
   background-color: #333;
 }
 
-/* Section Styling */
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f9f9f9;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  user-select: none;
+  cursor: default;
+  padding-left: 15px;
+  margin-right: auto;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #f9f9f9;
+}
+
+/* Sections */
 main {
   padding: 20px;
 }
 
-h1, h2, h3 {
-  text-align: center;
-}
-
-/* Projects Gallery */
+/* Projects */
 .projects-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -87,23 +119,19 @@ h1, h2, h3 {
 }
 
 .project-card img {
-  width: 100%;
-  aspect-ratio: 4 / 3; /* change ratio to 4/3 or 1/1 as needed */
-  object-fit: cover; /* ensures image fills area without stretching */
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 .project-card h3 {
-  margin: 10px 0 5px 0;
+  margin: 10px 0 5px;
 }
 
-.project-card a {
-  color: #f9f9f9;           /* Change this to whatever color you want */
-  text-decoration: none;    /* Removes underline */
-  font-weight: bold;        /* Optional */
-}
-
+.project-card a,
 .project-card a:visited {
-  color: #f9f9f9;           /* Keeps same color after clicking */
+  color: #f9f9f9;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .project-card p {
@@ -112,201 +140,46 @@ h1, h2, h3 {
   padding: 0 10px 15px;
 }
 
-/* Bio Section */
-
-.bio {
-  max-width: 1200px;
-  margin: 30px auto;
-  padding: 20px 15px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  color: #333;
-  box-sizing: border-box;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-}
-
-.bio img {
-  max-width:100%; 
-  height:auto; 
-  display:block; 
-  margin:auto; 
-  margin-top:10px; 
-  border-radius:8px;
-}
-
-.bio h1 {
-  font-size: 2.2rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.bio h2 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  font-size: 1.6rem;
-  text-align: center;
-}
-
-.bio p {
-  margin-bottom: 20px;
-  padding: 0 15px;
-  text-align: center;
-}
-
-.bio ul {
-  list-style-type: disc;
-  text-align: left;
-  max-width: 400px;
-  margin: 0 auto 30px auto;
-  padding-left: 20px;
-}
-
-.bio .button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #555;
-  color: #f9f9f9;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.bio .button:hover {
-  background-color: #333;
-}
-
-.contact {
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 20px 15px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  color: #333;
-  box-sizing: border-box;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-}
-
-.contact h2 {
-  font-size: 2rem;
-  margin-bottom: 25px;
-  color: #222;
-  text-align: center;
-}
-
-.contact-info p {
-  font-size: 1.1rem;
-  margin: 12px 0;
-  text-align: center;
-}
-
-.contact-info a {
-  color: #0077cc;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.contact-info a:hover {
-  color: #005fa3;
-  text-decoration: underline;
-}
-
-/* Optional form styles */
-/* Uncomment if you use the form
-.contact-form {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  resize: vertical;
-}
-
-.contact-form button {
-  padding: 12px;
-  background-color: #0077cc;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #005fa3;
-}
-*/
-
-/* Shared Portfolio Page Styling */
-/* ===== Shared Project Page Styles ===== */
 .project-page {
   max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  margin: 30px auto;
+  padding: 20px 15px;
+  text-align: left;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  box-sizing: border-box;
 }
 
-/* Headings on project pages */
-.project-page h1{
+.project-page h1 {
   font-size: 2.2rem;
   margin-bottom: 20px;
-  text-align: center;
 }
 
-.project-page h2{
-  margin-top: 30px;
-  margin-bottom: 15px;
+.project-page h2 {
+  margin: 30px 0 15px;
   font-size: 1.6rem;
-  text-align: center;
 }
 
 .project-page h3 {
   margin-bottom: 1rem;
-  text-align: center;
 }
 
-/* Paragraphs */
 .project-page p {
   margin-bottom: 20px;
   padding: 0 15px;
-  text-align: center;
 }
 
 .project-page ul {
-  list-style-type: disc;
-  text-align: left;
-  max-width: 400px;
-  margin: 0 auto 30px auto;
-  padding-left: 20px;
+  max-width: 500px;
+  margin: 0 auto 30px;
 }
 
-/* Images with ratio-based sizing */
-.project-page img { 
-  max-width:100%; 
-  height:auto; 
-  display:block; 
-  margin:auto; 
-  margin-top:30px; 
-  border-radius:8px;
+.project-page img {
+  margin-top: 30px;
   align-items: center;
 }
 
-/* Embedded videos responsive */
 .project-page iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -314,28 +187,74 @@ h1, h2, h3 {
   margin-bottom: 1rem;
 }
 
-/* Buttons or links inside project pages */
-.project-page .button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #555;
-  color: #f9f9f9;
+/* Bio Section */
+.bio {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px 15px;
+  text-align: center;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  box-sizing: border-box;
+}
+.bio img {
+  margin-top: 10px;
+}
+.bio h1 {
+  font-size: 2.2rem;
+  margin: 10px 0;
+}
+.bio h2 {
+  margin: 30px 0 15px;
+  font-size: 1.6rem;
+}
+.bio p {
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+.bio ul {
+  max-width: 400px;
+  margin: 0 auto 30px;
+}
+
+/* Contact Section */
+.contact {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px 15px;
+  text-align: center;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  box-sizing: border-box;
+}
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #222;
+}
+.contact-info p {
+  font-size: 1.1rem;
+  margin: 12px 0;
+}
+.contact-info a {
+  color: #0077cc;
   text-decoration: none;
-  border-radius: 6px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
 }
-
-.project-page .button:hover {
-  background-color: #333;
+.contact-info a:hover {
+  color: #005fa3;
+  text-decoration: underline;
 }
-
-
 
 /* Mobile Friendly */
 @media (max-width: 600px) {
   .navbar {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 }

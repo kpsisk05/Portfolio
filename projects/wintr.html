@@ -19,19 +19,54 @@
 
   <section class="project-page">
     <h1>Wi-Fi Network Tracking Robot (WiNTR)</h1>
-    <img src="../images/wintr.jpg" alt="WiNTR robot image" style="width:100%; max-width:600px;">
-    <h2>Background</h2>
-    <p>WiNTR is an autonomous robot designed to detect and track unregisteres Wi-Fi networks. 
-      During the summer of 2023 rpior to my senior year of High School I held an internship position 
-      at the Johns Hopkins Applied Physics Laboratory in the ASPIRE program. I worked with two other 
-      interns to develop WiNTR.</p>
-    <ul>
-      <li>High-torque motors with treads for grip</li>
-      <li>Obstacle detection and avoidance using ultrasonic and LIDAR</li>
-      <li>Weatherproof electronics housing</li>
-    </ul>
-    <p><strong>Tools:</strong> Arduino, Fusion 360, ROS</p>
-    <p><strong>Status:</strong> Prototype complete</p>
+      <img src="../images/wintr.jpg" alt="WiNTR robot image" style="width:100%; max-width:600px;">
+      
+      <h3>Background</h3>
+        <p>WiNTR is an autonomous robot designed to detect and track a Wi-Fi network's origin. 
+        During the summer of 2023 prior to my senior year of High School I held an internship position 
+        at the Johns Hopkins Applied Physics Laboratory in the ASPIRE program under the mentorship of Rob Rosenberry 
+        and Tom Dignan. I worked with two other interns to develop WiNTR.</p>
+        
+      <h3>Objective</h3>
+        <p>WiNTR was developed to autonomously track Wi-Fi access points by detecting signal strength and 
+          navigating toward the source. Beyond its core function, the robot demonstrates how autonomous vehicles 
+          can be used to reduce human effort and identify rogue or unauthorized access points, a critical step 
+          in securing wireless networks.</p>
+      
+      <h3>Requirements</h3>
+        <ul>
+          <li>Runs on rechargeable Li-ion batteries for at least 10 minutes.</li>
+          <li>Controlled by an Arduino-compatible microcontroller.</li>
+          <li>Uses an ESP module for Wi-Fi communication.</li>
+          <li>Supports a command protocol between client, ESP module, and microcontroller.</li>
+          <li>Can autonomously navigate and track a Wi-Fi access point.</li>
+          <li>Must include a mechanical kill switch.</li>
+        </ul>
+
+      <h3>Results</h3>
+        <p>WiNTR successfully demonstrated autonomous navigation by locating the strongest Wi-Fi access points. 
+          Its decision-making process resembled the machine learning principle of gradient descent, continuously 
+          moving toward areas of stronger signal strength. The robot's rapid sampling of signal data improved 
+          accuracy and reduced error, confirming the viability of the design.</p>
+
+      <h3>My Contributions</h3>
+          <ul>
+            <li>Designed and modeled all CAD components, including 3D-printed battery housing, servo mount, and ultrasonic sensor bracket.</li>
+            <li>Created and laser-cut the top plate to securely mount system components.</li>
+            <li>Performed wiring and soldering of electronic components to support system integration.</li>
+            <li>Assisted with testing and debugging to improve robot reliability and performance.</li>
+          </ul>
+
+        <h3>Acknowledgements</h3>
+          <p>WiNTR was created during the 2023 Johns Hopkins APL ASPIRE internship program under the mentorship of Thomas Dignan, 
+            Rob Rosenberry, and Evan Bolt. The intern team included Kevin Sisk, Tinu Vanapamula, and Saron Shimels, 
+            who collaborated to research, design, and build the system.</p>
+
+        <h2>Project Poster</h2>
+            <img src="../images/WiNTR_Poster.jpg" alt="WiNTR Poster image" style="max-width:100%; height:auto;">
+            <a href="../pdfs/WiNTRPoster.pdf" download class="button">Download Project Poster</a>
+
+
   </section>
 </body>
 </html>
