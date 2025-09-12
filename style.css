@@ -140,6 +140,14 @@ main {
   padding: 0 10px 15px;
 }
 
+.project-page video {
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* keeps proportions like your iframe */
+  object-fit: cover;      /* crops edges if needed */
+  display: block;
+  border-radius: 8px;     /* same rounded look as images */
+}
+
 .project-page {
   max-width: 900px;
   margin: 30px auto;
@@ -182,7 +190,7 @@ main {
 
 .project-page iframe {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3/4;
   border: none;
   margin-bottom: 1rem;
 }
